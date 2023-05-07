@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MSA</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">E-mail</string>
+    <string name="passwordConfirm">Password Confirm</string>
+</resources>

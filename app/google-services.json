@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "524849256698",
+    "project_id": "music-sharing-app-2b950",
+    "storage_bucket": "music-sharing-app-2b950.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524849256698:android:04c4eac2fc8b7c59051143",
+        "android_client_info": {
+          "package_name": "com.example.msa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524849256698-uevfu2a7luqaph9tm3upudrnqhs2m96l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.msa",
+            "certificate_hash": "31e35f52c17e507879734eff65f87d3cde0141eb"
+          }
+        },
+        {
+          "client_id": "524849256698-kjk86v606p6fp8dj0m9roomj8sumh7rj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtLctc8kkugEy2WiFz9sgRypDYZU7458c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524849256698-kjk86v606p6fp8dj0m9roomj8sumh7rj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
