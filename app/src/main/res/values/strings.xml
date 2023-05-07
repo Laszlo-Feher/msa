@@ -9,4 +9,7 @@
     <string name="title">Title</string>
     <string name="url">URL</string>
     <string name="addNewMusic">Add new music</string>
+    <string name="registration">Registration</string>
+    <string name="save">Save</string>
+    <string name="show_all">Show All</string>
 </resources>

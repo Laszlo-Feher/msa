@@ -25,6 +25,16 @@
                 android:scaleY="1"
                 app:srcCompat="@drawable/icon" />
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m_medium"
+                android:text="@string/login"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"

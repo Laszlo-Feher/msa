@@ -73,7 +73,7 @@ public class MusicListActivity extends AppCompatActivity {
         title = findViewById(R.id.editTextTitle);
         url = findViewById(R.id.editTextURL);
         save = findViewById(R.id.buttonSave);
-        show = findViewById(R.id.button);
+        show = findViewById(R.id.buttonShowAll);
     }
 
     private void checkAuth() {
@@ -95,8 +95,20 @@ public class MusicListActivity extends AppCompatActivity {
                 String id = UUID.randomUUID().toString();
 
                 saveToFireStore(id, titleValue, urlValue);
+                resetValues();
             }
         });
+        show.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAllMusic();
+            }
+        });
+    }
+
+    private void resetValues() {
+        title.setText("");
+        url.setText("");
     }
 
     private void saveToFireStore(String id, String title, String url) {
@@ -123,5 +135,9 @@ public class MusicListActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this,"Empty fields not allowed", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void showAllMusic() {
+        //TODO
     }
 }

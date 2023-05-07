@@ -46,12 +46,13 @@ public class RegistrationActivity extends AppCompatActivity {
         String passwordValue = password.getText().toString();
         String passwordConfirmValue = passwordConfirm.getText().toString();
 
-
+        if (!usernameValue.isEmpty() && !emailValue.isEmpty() && !passwordValue.isEmpty() && !passwordConfirmValue.isEmpty() && passwordValue.equals(passwordConfirmValue))
         firebaseAuth.createUserWithEmailAndPassword(emailValue,passwordValue).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     message = "User created!";
+                    resetInputFields();
                     openMusicList();
                 } else {
                     String message = "An error occured during registration! ";
@@ -63,7 +64,14 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
-    public void openLogin() {
+    private void resetInputFields() {
+        username.setText("");
+        email.setText("");
+        password.setText("");
+        passwordConfirm.setText("");
+    }
+
+    public void openLogin(View view) {
         finish();
     }
 

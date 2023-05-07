@@ -16,7 +16,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getName();
-
     EditText email;
     EditText password;
     FirebaseAuth firebaseAuth;
@@ -37,18 +36,20 @@ public class MainActivity extends AppCompatActivity {
         String emailValue = email.getText().toString();
         String passwordValue = password.getText().toString();
 
-        firebaseAuth.signInWithEmailAndPassword(emailValue,passwordValue).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    message = "User logged in!";
-                    openMusicList();
-                } else {
-                    String message = "An error occured during the login process! ";
-                    Toast.makeText(MainActivity.this, message + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+        if (!emailValue.isEmpty() && !passwordValue.isEmpty()) {
+            firebaseAuth.signInWithEmailAndPassword(emailValue, passwordValue).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        message = "User logged in!";
+                        openMusicList();
+                    } else {
+                        String message = "An error occured during the login process! ";
+                        Toast.makeText(MainActivity.this, message + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     public void openMusicList() {
