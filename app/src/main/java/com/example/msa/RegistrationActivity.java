@@ -63,6 +63,10 @@ public class RegistrationActivity extends AppCompatActivity {
         });
     }
 
+    public void openLogin() {
+        finish();
+    }
+
     public void openMusicList() {
         Intent intent = new Intent(this, MusicListActivity.class);
         startActivity(intent);

@@ -6,4 +6,7 @@
     <string name="register">Register</string>
     <string name="email">E-mail</string>
     <string name="passwordConfirm">Password Confirm</string>
+    <string name="title">Title</string>
+    <string name="url">URL</string>
+    <string name="addNewMusic">Add new music</string>
 </resources>

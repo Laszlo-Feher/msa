@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -48,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
                     String message = "An error occured during the login process! ";
                     Toast.makeText(MainActivity.this, message + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
-
-                Log.d(LOG_TAG, message);
             }
         });
     }
@@ -59,9 +56,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void register(View view) {
+    public void openRegistration(View view) {
         Intent intent = new Intent(this, RegistrationActivity.class);
-        //TODO
-    startActivity(intent);
+        startActivity(intent);
     }
 }
